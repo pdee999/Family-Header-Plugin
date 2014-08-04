@@ -37,21 +37,20 @@ $(document).ready(function() {
 		fbhButtonIcon = $('#fbhButton i');
 		fbhSites = $('#fbhSites');
 		headWrap = $('header#fbhWrapper');
-		buttonWrap = $('buttonWrap')
+		buttonWrap = $('#buttonWrap')
 		bottomMargin = parseInt($('header#fbhWrapper').css('padding-bottom'));
-		//topMargin = parseInt($('header#fbhWrapper').css('padding-top'));
+		topMargin = parseInt($('header#fbhWrapper').css('padding-top'));
 		fbhTotalHeight = fbhSites.outerHeight() - bottomMargin;
-		buttonWrap.css('top', headWrap + 'px');  //Sets intial button location
+        $(buttonWrap).css('top', headWrap.outerHeight() + 4 + 'px');  //Sets intial button location //!!!!!!!!
 		$(fbhButton).click(function() {
 			if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
 				$(fbhButtonIcon).removeClass('fa-chevron-down').addClass('fa-chevron-up');
-				//$(fbhSites).toggle( 'bounce', { times: 1 }, 'slow' );
-				//$(headWrap).effect( 'bounce', { times: 1 }, 'slow' );
 				$(headWrap).animate({height : fbhTotalHeight + 'px'});
-				buttonWrap.css('top', headWrap.outerHeight());
+				$(buttonWrap).animate({top : fbhTotalHeight + topMargin + bottomMargin + 5 + 'px'}); //!!!!!!!!
 				$(window).resize(function() {
 					newTotalHeight = fbhSites.outerHeight() - bottomMargin;
 					$(headWrap).animate({height : newTotalHeight + 'px'});
+                    $(buttonWrap).animate({top : newTotalHeight + topMargin + bottomMargin + 5 + 'px'}); //!!!!!!!!
 					});
 			} else if ($(fbhButtonIcon).hasClass('fa-chevron-up')) {
 				$(fbhButtonIcon).removeClass('bfa-chevron-up').addClass('fa-chevron-down');
