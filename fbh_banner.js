@@ -28,37 +28,51 @@ $(document).ready(function() {
 	$('body').prepend(htmlStr);
 	$('#fbhWrapper').load('fbh_banner.html', function() {
 		
-		//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
 		bodyMargin = $('#fbhWrapper').outerHeight();
-		$('body').css('margin-top', bodyMargin + 'px');
-		
-		//TOGGLE SITES NAV VISIBILITY
 		fbhButton = $('#fbhButton');
 		fbhButtonIcon = $('#fbhButton i');
 		fbhSites = $('#fbhSites');
 		headWrap = $('header#fbhWrapper');
-		buttonWrap = $('#buttonWrap')
+		buttonWrap = $('#buttonWrap');
+		buttonPad = parseInt($('#fbhButton').css('paddingTop'));
 		bottomMargin = parseInt($('header#fbhWrapper').css('padding-bottom'));
 		topMargin = parseInt($('header#fbhWrapper').css('padding-top'));
-		fbhTotalHeight = fbhSites.outerHeight() - bottomMargin;
-        $(buttonWrap).css('top', headWrap.outerHeight() + 4 + 'px');  //Sets intial button location //!!!!!!!!
+		borderWidth = parseInt($('header#fbhWrapper').css('border-bottom-width'));
+		startPad = headWrap.outerHeight() + buttonPad - (borderWidth * 2);
+		startHeight = headWrap.height();
+		fbhHeight = fbhSites.outerHeight() - bottomMargin;
+		fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
+		
+		//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
+		$('body').css('margin-top', bodyMargin + 'px');
+		
+		//SET INITIAL BUTTON MARGIN
+        $(buttonWrap).css('top', startPad + 'px');
+		
+		//TOGGLE NAV VISIBILITY
 		$(fbhButton).click(function() {
 			if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
 				$(fbhButtonIcon).removeClass('fa-chevron-down').addClass('fa-chevron-up');
-				$(headWrap).animate({height : fbhTotalHeight + 'px'});
-				$(buttonWrap).animate({top : fbhTotalHeight + topMargin + bottomMargin + 5 + 'px'}); //!!!!!!!!
-				$(window).resize(function() {
-					newTotalHeight = fbhSites.outerHeight() - bottomMargin;
-					$(headWrap).animate({height : newTotalHeight + 'px'});
-                    $(buttonWrap).animate({top : newTotalHeight + topMargin + bottomMargin + 5 + 'px'}); //!!!!!!!!
-					});
+				$(headWrap).animate({height : fbhHeight + 'px'});
+				$(buttonWrap).animate({top : fbhTotalHeight + 'px'});
+				
 			} else if ($(fbhButtonIcon).hasClass('fa-chevron-up')) {
 				$(fbhButtonIcon).removeClass('bfa-chevron-up').addClass('fa-chevron-down');
 				//$(fbhSites).toggle('slide', { direction: 'up' }, 'slow');
+				$(headWrap).animate({height : startHeight + 'px'});
+				$(buttonWrap).animate({top : startPad + 'px'}); //!!!!!!!!!!!!
 			} else {
 				$(fbhButtonIcon).addClass('fa-chevron-down');
 				//$(fbhSites).toggle( 'slide', { direction: 'up' }, 'slow');
 			}
+			});
+			
+		//RESIZE HEADER & UPDATE BUTTON MARGIN ON WINDOW RESIZE
+		$(window).resize(function() {
+			newHeight = $(fbhSites).outerHeight() - bottomMargin;
+			newTotalHeight = newHeight + topMargin + bottomMargin + buttonPad - borderWidth;
+			$(headWrap).animate({height : newHeight + 'px'});
+			$(buttonWrap).animate({top : newTotalHeight + 'px'}); //!!!!!!!!
 			});
 			
 		//MATCH LINK HREF TO URL
