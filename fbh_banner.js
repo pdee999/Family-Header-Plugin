@@ -45,6 +45,9 @@ $(document).ready(function() {
 		
 		//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
 		$('body').css('margin-top', bodyMargin + 'px');
+
+        //ADD FONT-AWESOME CLASS TO FOOTER LI ELEMENTS
+        $('ul#fbhLinks li').attr('class', 'fa-li fa fa-caret-right');
 		
 		//SET INITIAL BUTTON MARGIN
         $(buttonWrap).css('top', startPad + 'px');
