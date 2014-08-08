@@ -13,15 +13,17 @@ body {
 header#fbhWrapper{
     background:#e7e9f3;
     border-bottom:#e7e9f3 1px solid;
-    padding:15px 0px;font-family: /*'Iceland', cursive*/ "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-family: /*'Iceland', cursive*/ "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-weight:bold;
     font-size:13px;
     text-align:center;
     /*min-height:15px;*/
     height:15px;
+	padding:15px 0px;
     position:absolute;
     width:100%;top:0;
     overflow:hidden;
+	z-index:9999;
 }
 header#fbhWrapper a {
     color:/*#048b56*/ #111;
@@ -163,6 +165,7 @@ header#fbhWrapper a {
     width:auto;
     position: absolute;
     left: 50%;
+	z-index:999;
 }
 #fbhButton {
     color:#000;

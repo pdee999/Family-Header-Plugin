@@ -24,72 +24,92 @@ $(document).ready(function() {
 		}
 	
 	//INSERT MARKUP
-	htmlStr = '<header id="fbhWrapper"></header><div id="buttonWrap"><a id="fbhButton" href="#"><!--<span id="fbhButtonLeft">--></span>Our Website Family <i class="fa fa-chevron-down"></i><!--<span id="fbhButtonRight"></span>--></a></div>';
+	htmlStr = '<header id="fbhWrapper"></header><div id="buttonWrap"><a id="fbhButton" href="#">Our Website Family <i class="fa fa-chevron-down"></i></a></div>';
 	$('body').prepend(htmlStr);
 	$('#fbhWrapper').load('fbh_banner.html', function() {
 		
-		bodyMargin = $('#fbhWrapper').outerHeight();
-		fbhButton = $('#fbhButton');
-		fbhButtonIcon = $('#fbhButton i');
-		fbhSites = $('#fbhSites');
-		headWrap = $('header#fbhWrapper');
-		buttonWrap = $('#buttonWrap');
-		buttonPad = parseInt($('#fbhButton').css('paddingTop'));
-		bottomMargin = parseInt($('header#fbhWrapper').css('padding-bottom'));
-		topMargin = parseInt($('header#fbhWrapper').css('padding-top'));
-		borderWidth = parseInt($('header#fbhWrapper').css('border-bottom-width'));
-		startPad = headWrap.outerHeight() + buttonPad - (borderWidth * 2);
-		startHeight = headWrap.height();
-		fbhHeight = fbhSites.outerHeight() - bottomMargin;
-		fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
-		
-		//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
-		$('body').css('margin-top', bodyMargin + 'px');
-
-        //ADD FONT-AWESOME CLASS TO FOOTER LI ELEMENTS
-        $('ul#fbhLinks li').attr('class', 'fa-li fa fa-caret-right');
-		
-		//SET INITIAL BUTTON MARGIN
-        $(buttonWrap).css('top', startPad + 'px');
-		
-		//TOGGLE NAV VISIBILITY
-		$(fbhButton).click(function() {
-			if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
-				$(fbhButtonIcon).removeClass('fa-chevron-down').addClass('fa-chevron-up');
-				$(headWrap).animate({height : fbhHeight + 'px'});
-				$(buttonWrap).animate({top : fbhTotalHeight + 'px'});
-				
-			} else if ($(fbhButtonIcon).hasClass('fa-chevron-up')) {
-				$(fbhButtonIcon).removeClass('bfa-chevron-up').addClass('fa-chevron-down');
-				//$(fbhSites).toggle('slide', { direction: 'up' }, 'slow');
-				$(headWrap).animate({height : startHeight + 'px'});
-				$(buttonWrap).animate({top : startPad + 'px'}); //!!!!!!!!!!!!
-			} else {
-				$(fbhButtonIcon).addClass('fa-chevron-down');
-				//$(fbhSites).toggle( 'slide', { direction: 'up' }, 'slow');
-			}
-			});
+		setTimeout(function(){
 			
-		//RESIZE HEADER & UPDATE BUTTON MARGIN ON WINDOW RESIZE
-		$(window).resize(function() {
-			newHeight = $(fbhSites).outerHeight() - bottomMargin;
-			newTotalHeight = newHeight + topMargin + bottomMargin + buttonPad - borderWidth;
-			$(headWrap).animate({height : newHeight + 'px'});
-			$(buttonWrap).animate({top : newTotalHeight + 'px'}); //!!!!!!!!
-			});
+			headWrap = $('header#fbhWrapper');
 			
-		//MATCH LINK HREF TO URL
-		sitePath = window.location.href;
-		currentSite = sitePath.split('/');
-		$('#fbhSites ul li a').each(function(){
-			linkUrl = $(this).attr('href');
-			if( currentSite[2] == linkUrl) {
-				$(this).addClass('currentLink');
+			//SET INITIAL HEIGHT & PADDING OF HEADER
+			//$(headWrap).css({'height' : '15px', 'padding' : '15px 0px'});
+			
+			bodyMargin = $(headWrap).outerHeight();
+			fbhButton = $('#fbhButton');
+			fbhButtonIcon = $('#fbhButton i');
+			fbhSites = $('#fbhSites');
+			buttonWrap = $('#buttonWrap');
+			buttonPad = parseInt($(fbhButton).css('paddingTop'));
+			bottomMargin = parseInt($(headWrap).css('padding-bottom'));
+			topMargin = parseInt($(headWrap).css('padding-top'));
+			borderWidth = parseInt($(headWrap).css('border-bottom-width'));
+			startPad = bodyMargin + buttonPad - (borderWidth * 2);
+			startHeight = headWrap.height();
+			fbhHeight = fbhSites.outerHeight() - bottomMargin;
+			fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;		
+			
+			//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
+			$('body').css('margin-top', bodyMargin + 'px');
+			
+			//SET INITIAL BUTTON MARGIN
+			$(buttonWrap).css('top', startPad + 'px');
+			
+			//ADD FONT-AWESOME CLASS TO FOOTER LI ELEMENTS
+			$('ul#fbhLinks li').attr('class', 'fa-li fa fa-caret-right');
+			
+			//RECALCULATE VARIABLES, RESIZE HEADER & UPDATE BUTTON MARGIN ON WINDOW RESIZE
+			function recalcValues() {
+				fbhHeight = fbhSites.outerHeight() - bottomMargin;
+				fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
+			};
+			function fhbResize() {
+				//console.log('window resized');
+				$(headWrap).animate({height : fbhHeight + 'px'}, 400, 'easeOutBounce');
+				$(buttonWrap).animate({top : fbhTotalHeight + 'px'}, 400, 'easeOutBounce');
+			};
+			$(window).resize(function () {
+				if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
+					recalcValues();
+					} else {
+					recalcValues();
+					fhbResize();
 				}
 			});
-		
-		//FEATURED ITEM HOVER EFFECTS
-		
+			
+			//TOGGLE NAV VISIBILITY/BUTTON ICON
+			$(fbhButton).click(function(event) {
+				event.preventDefault();
+				if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
+					$(fbhButtonIcon).removeClass('fa-chevron-down').addClass('fa-chevron-up');
+					$(headWrap).animate({height : fbhHeight + 10 + 'px'}, 400, 'swing', function () {
+							$(headWrap).animate({height : fbhHeight + 'px'}, 200, 'easeInQuint');
+					});
+					$(buttonWrap).animate({top : fbhTotalHeight + 10 + 'px'}, 400, 'swing', function () {
+							$(buttonWrap).animate({top : fbhTotalHeight + 'px'}, 200, 'easeInQuint');
+					});
+				} else if ($(fbhButtonIcon).hasClass('fa-chevron-up')) {
+					$(fbhButtonIcon).removeClass('bfa-chevron-up').addClass('fa-chevron-down');
+					$(headWrap).animate({height : startHeight + 'px'}, 400, 'easeInQuad');
+					$(buttonWrap).animate({top : startPad + 'px'}, 400, 'easeInQuad');
+				} else {
+					$(fbhButtonIcon).addClass('fa-chevron-down');
+				}
+			});
+				
+			//MATCH LINK HREF TO URL
+			sitePath = window.location.href;
+			currentSite = sitePath.split('/');
+			$('#fbhSites ul li a').each(function(){
+				linkUrl = $(this).attr('href');
+				if( currentSite[2] == linkUrl) {
+					$(this).addClass('currentLink');
+					}
+			});
+			
+			//FEATURED ITEM HOVER EFFECTS
+				
+			}, 100);
 		
 	});
 	
