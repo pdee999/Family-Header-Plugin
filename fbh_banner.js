@@ -63,7 +63,7 @@ $(document).ready(function() {
 				fbhHeight = fbhContent.outerHeight() - bottomMargin;
 				fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
 			};
-			function fhbResize() {
+			function fbhResize() {
 				//console.log('window resized');
 				$(headWrap).animate({height : fbhHeight + 'px'}, 400, 'easeOutBounce');
 				$(buttonWrap).animate({top : fbhTotalHeight + 'px'}, 400, 'easeOutBounce');
@@ -74,7 +74,7 @@ $(document).ready(function() {
                         recalcValues();
                     } else {
                         recalcValues();
-                        fhbResize();
+						fbhResize();
                     }
                 }, 0);
 			});
