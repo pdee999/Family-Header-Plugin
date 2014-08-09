@@ -383,6 +383,9 @@ header#fbhWrapper a {
 	#fbhContent #fbhSites ul li {
         width:25%;
     }
+	#fbhContent #fbhCallouts ul li {
+		width: 33.33333333333333%;
+	}
 	#fbhContent #fbhFeatures ul li {
         width:50%;
     }
@@ -408,9 +411,6 @@ header#fbhWrapper a {
 	#fbhContent #fbhSites ul li {
         width:12.5%;
     }
-	#fbhContent #fbhCallouts ul li {
-		width: 33.33333333333333%;
-	}
 	#fbhContent ul#fbhLinks li {
         width:33.33333333333333%;
     }

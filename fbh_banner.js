@@ -100,18 +100,51 @@ $(document).ready(function() {
 			});
 				
 			//MATCH LINK HREF TO URL
-			sitePath = window.location.href;
+			/*sitePath = window.location.href;
 			currentSite = sitePath.split('/');
 			$('#fbhContent ul li a').each(function(){
 				linkUrl = $(this).attr('href');
 				if( currentSite[2] == linkUrl) {
 					$(this).addClass('currentLink');
 					}
-			});
+			});*/
 			
 			//FEATURED ITEM HOVER EFFECTS
 				
 			}, 100);
+		
+		//CONSTRAIN SITES BOX HEIGHT TO WIDTHS
+		fbhSites = $('#fbhSites').find('a');
+		function sitesCalc() {
+			sitesWidth = $(fbhSites).css('width');
+			$(fbhSites).css('height', sitesWidth);
+			};
+		sitesCalc();
+		$(window).resize(function () {
+			sitesCalc();
+			}); //!!!!!!!!!!!!
+		
+		//CONSTRAIN CALLOUT BOX HEIGHT TO WIDTHS
+		fbhCalls = $('#fbhCallouts').find('a');
+		function callsCalc() {
+			callsWidth = $(fbhCalls).css('width');
+			$(fbhCalls).css('height', callsWidth);
+		};
+		callsCalc();
+		$(window).resize(function () {
+			callsCalc();
+		});
+			
+		//CONSTRAIN FEATURE BOX HEIGHT TO WIDTHS
+		fbhFeat = $('#fbhFeatures').find('a');
+		function featCalc() {
+			featWidth = $(fbhFeat).css('width');
+			$(fbhFeat).css('height', featWidth);
+		};
+		featCalc();
+		$(window).resize(function () {
+			featCalc();
+		});
 		
 	});
 	
