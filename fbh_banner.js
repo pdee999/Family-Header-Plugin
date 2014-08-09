@@ -38,7 +38,7 @@ $(document).ready(function() {
 			bodyMargin = $(headWrap).outerHeight();
 			fbhButton = $('#fbhButton');
 			fbhButtonIcon = $('#fbhButton i');
-			fbhPosts = $('#fbhPosts');
+			fbhContent = $('#fbhContent');
 			buttonWrap = $('#buttonWrap');
 			buttonPad = parseInt($(fbhButton).css('paddingTop'));
 			bottomMargin = parseInt($(headWrap).css('padding-bottom'));
@@ -46,7 +46,7 @@ $(document).ready(function() {
 			borderWidth = parseInt($(headWrap).css('border-bottom-width'));
 			startPad = bodyMargin + buttonPad - (borderWidth * 2);
 			startHeight = headWrap.height();
-			fbhHeight = fbhPosts.outerHeight() - bottomMargin;
+			fbhHeight = fbhContent.outerHeight() - bottomMargin;
 			fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;		
 			
 			//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
@@ -60,7 +60,7 @@ $(document).ready(function() {
 			
 			//RECALCULATE VARIABLES, RESIZE HEADER & UPDATE BUTTON MARGIN ON WINDOW RESIZE
 			function recalcValues() {
-				fbhHeight = fbhPosts.outerHeight() - bottomMargin;
+				fbhHeight = fbhContent.outerHeight() - bottomMargin;
 				fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
 			};
 			function fhbResize() {
@@ -100,7 +100,7 @@ $(document).ready(function() {
 			//MATCH LINK HREF TO URL
 			sitePath = window.location.href;
 			currentSite = sitePath.split('/');
-			$('#fbhPosts ul li a').each(function(){
+			$('#fbhContent ul li a').each(function(){
 				linkUrl = $(this).attr('href');
 				if( currentSite[2] == linkUrl) {
 					$(this).addClass('currentLink');
