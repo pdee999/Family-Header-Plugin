@@ -69,12 +69,14 @@ $(document).ready(function() {
 				$(buttonWrap).animate({top : fbhTotalHeight + 'px'}, 400, 'easeOutBounce');
 			};
 			$(window).resize(function () {
-				if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
-					recalcValues();
-					} else {
-					recalcValues();
-					fhbResize();
-				}
+                setTimeout(function(){
+                    if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
+                        recalcValues();
+                    } else {
+                        recalcValues();
+                        fhbResize();
+                    }
+                }, 0);
 			});
 			
 			//TOGGLE NAV VISIBILITY/BUTTON ICON

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6816647f-e600-4b52-93da-6134a71b6921" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fbh_banner.css" afterPath="$PROJECT_DIR$/fbh_banner.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fbh_banner.html" afterPath="$PROJECT_DIR$/fbh_banner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fbh_banner.js" afterPath="$PROJECT_DIR$/fbh_banner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Family-Header-Plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fbh_banner.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fbh_banner.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fbh_banner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="41" selection-start="3891" selection-end="3892" vertical-scroll-proportion="-7.8076925" vertical-offset="1327" max-vertical-offset="1830">
+            <state line="78" column="19" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.91053677" vertical-offset="727" max-vertical-offset="1860">
               <folding />
             </state>
           </provider>
@@ -41,7 +38,7 @@
       <file leaf-file-name="fbh_banner.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fbh_banner.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="0" selection-start="2537" selection-end="2574" vertical-scroll-proportion="-5.5555553" vertical-offset="1425" max-vertical-offset="6885">
+            <state line="15" column="21" selection-start="357" selection-end="357" vertical-scroll-proportion="-5.769231" vertical-offset="75" max-vertical-offset="6945">
               <folding />
             </state>
           </provider>
@@ -58,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.20792079" vertical-offset="0" max-vertical-offset="505">
+            <state line="7" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="300">
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -82,10 +79,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/fbh_banner.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/fbh_banner.html" />
         <option value="$PROJECT_DIR$/fbh_banner.css" />
+        <option value="$PROJECT_DIR$/fbh_banner.js" />
       </list>
     </option>
   </component>
@@ -204,10 +201,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -313,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fbh_banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="41" selection-start="3891" selection-end="3892" vertical-scroll-proportion="-7.8076925" vertical-offset="1327" max-vertical-offset="1830">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fbh_banner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="47" selection-start="1596" selection-end="1596" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1530">
@@ -329,19 +319,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="300">
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fbh_banner.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="0" selection-start="2537" selection-end="2574" vertical-scroll-proportion="-5.5555553" vertical-offset="1425" max-vertical-offset="6885">
+        <state line="15" column="21" selection-start="357" selection-end="357" vertical-scroll-proportion="-5.769231" vertical-offset="75" max-vertical-offset="6945">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/fbh_banner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.20792079" vertical-offset="0" max-vertical-offset="505">
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="78" column="19" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.91053677" vertical-offset="727" max-vertical-offset="1860">
+          <folding />
         </state>
       </provider>
     </entry>

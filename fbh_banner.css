@@ -57,6 +57,10 @@ header#fbhWrapper a {
     height:0;
     overflow:hidden;
 }*/
+#fbhContent ul li {
+    position: relative;
+    z-index: 1;
+}
 #fbhContent #fbhSites ul,
 #fbhContent #fbhCallouts ul,
 #fbhContent #fbhFeatures ul {
