@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6816647f-e600-4b52-93da-6134a71b6921" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fbh_banner.css" afterPath="$PROJECT_DIR$/fbh_banner.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fbh_banner.js" afterPath="$PROJECT_DIR$/fbh_banner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Family-Header-Plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +29,7 @@
       <file leaf-file-name="fbh_banner.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fbh_banner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="19" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.91053677" vertical-offset="727" max-vertical-offset="1860">
+            <state line="60" column="75" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.6262425" vertical-offset="600" max-vertical-offset="1860">
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="fbh_banner.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fbh_banner.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="357" selection-end="357" vertical-scroll-proportion="-5.769231" vertical-offset="75" max-vertical-offset="6945">
+            <state line="95" column="17" selection-start="1117" selection-end="1897" vertical-scroll-proportion="-14.730769" vertical-offset="1042" max-vertical-offset="6945">
               <folding />
             </state>
           </provider>
@@ -330,14 +330,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fbh_banner.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="357" selection-end="357" vertical-scroll-proportion="-5.769231" vertical-offset="75" max-vertical-offset="6945">
+        <state line="95" column="17" selection-start="1117" selection-end="1897" vertical-scroll-proportion="-14.730769" vertical-offset="1042" max-vertical-offset="6945">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fbh_banner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="19" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.91053677" vertical-offset="727" max-vertical-offset="1860">
+        <state line="60" column="75" selection-start="2190" selection-end="2190" vertical-scroll-proportion="0.6262425" vertical-offset="600" max-vertical-offset="1860">
           <folding />
         </state>
       </provider>

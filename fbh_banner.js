@@ -58,7 +58,7 @@ $(document).ready(function() {
 			//ADD FONT-AWESOME CLASS TO FOOTER LI ELEMENTS
 			$('ul#fbhLinks li').attr('class', 'fa-li fa fa-caret-right');
 			
-			//RECALCULATE VARIABLES, RESIZE HEADER & UPDATE BUTTON MARGIN ON WINDOW RESIZE
+			//RECALCULATE VARIABLES, RESIZE HEADER & UPDATE BUTTON POSITION ON WINDOW RESIZE
 			function recalcValues() {
 				fbhHeight = fbhContent.outerHeight() - bottomMargin;
 				fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
