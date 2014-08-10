@@ -10,7 +10,7 @@ $(document).ready(function() {
 		}
 	else {
    		head.append(fbhCSS);
-		}
+	}
 		
 	//INSERT FONT-AWESOME CSS
 	html = $('html');
@@ -19,9 +19,9 @@ $(document).ready(function() {
 	fbhCSS = html.find('link[href*="fbh_banner.css"]');
 	if (faExhists.length) {
 		//console.log('Font-Awesome is already added.');
-		}else {
+	}else {
 		$(fbhCSS).before(faCSS);
-		}
+	}
 	
 	//INSERT MARKUP
 	htmlStr = '<header id="fbhWrapper"></header><div id="buttonWrap"><a id="fbhButton" href="#">Our Website Family <i class="fa fa-chevron-down"></i></a></div>';
@@ -35,18 +35,18 @@ $(document).ready(function() {
 			function sitesCalc() {
 				sitesWidth = $(fbhSites).css('width');
 				$(fbhSites).css('height', sitesWidth);
-				};
+			}
 			sitesCalc();
 			$(window).resize(function () {
 				sitesCalc();
-				});
+			});
 			
 			//CONSTRAIN CALLOUT BOX HEIGHT TO WIDTHS
 			fbhCalls = $('#fbhCallouts').find('a');
 			function callsCalc() {
 				callsWidth = $(fbhCalls).css('width');
 				$(fbhCalls).css('height', callsWidth);
-			};
+			}
 			callsCalc();
 			$(window).resize(function () {
 				callsCalc();
@@ -57,20 +57,16 @@ $(document).ready(function() {
 			function featCalc() {
 				featWidth = $(fbhFeat).css('width');
 				$(fbhFeat).css('height', featWidth);
-			};
+			}
 			featCalc();
 			$(window).resize(function () {
 				featCalc();
 			});
 				
 			headWrap = $('header#fbhWrapper');
-			
-			//SET INITIAL HEIGHT & PADDING OF HEADER
-			//$(headWrap).css({'height' : '15px', 'padding' : '15px 0px'});
-			
 			bodyMargin = $(headWrap).outerHeight();
 			fbhButton = $('#fbhButton');
-			fbhButtonIcon = $('#fbhButton i');
+			fbhButtonIcon = fbhButton.find('i');
 			fbhContent = $('#fbhContent');
 			buttonWrap = $('#buttonWrap');
 			buttonPad = parseInt($(fbhButton).css('paddingTop'));
@@ -80,7 +76,10 @@ $(document).ready(function() {
 			startPad = bodyMargin + buttonPad - (borderWidth * 2);
 			startHeight = headWrap.height();
 			fbhHeight = fbhContent.outerHeight() - bottomMargin;
-			fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;		
+			fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
+
+            //SET INITIAL HEIGHT & PADDING OF HEADER
+            //$(headWrap).css({'height' : '15px', 'padding' : '15px 0px'});
 			
 			//SET TOP MARGIN OF BODY TO EQUAL THE HEIGHT OF THE HEADER
 			$('body').css('margin-top', bodyMargin + 'px');
@@ -95,12 +94,12 @@ $(document).ready(function() {
 			function recalcValues() {
 				fbhHeight = fbhContent.outerHeight() - bottomMargin;
 				fbhTotalHeight = fbhHeight + topMargin + bottomMargin + buttonPad - borderWidth;
-			};
+			}
 			function fbhResize() {
 				//console.log('window resized');
 				$(headWrap).clearQueue().animate({height : fbhHeight + 'px'}, 400, 'easeOutBounce');
 				$(buttonWrap).clearQueue().animate({top : fbhTotalHeight + 'px'}, 400, 'easeOutBounce');
-			};
+			}
 			$(window).resize(function () {
                 setTimeout(function(){
                     if ($(fbhButtonIcon).hasClass('fa-chevron-down')) {
@@ -143,6 +142,16 @@ $(document).ready(function() {
 			});*/
 			
 			//FEATURED ITEM HOVER EFFECTS
+
+            //TRUNCATE LAST LINE WITH ELLIPSES
+            /*truncElem = $('#fbhCallouts').find('a');
+            if( truncElem.offsetHeight < truncElem.scrollHeight || truncElem.offsetWidth < truncElem.scrollWidth){
+                boxText = document.getElementById('fbhCallouts').innerHTML.split(/\r?\n/);
+                alert(boxText[boxText.length - 1]);
+            }
+            else{
+                //your element don't have overflow
+            }*/
 				
 			}, 100);
 		

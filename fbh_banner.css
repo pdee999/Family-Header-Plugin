@@ -96,6 +96,11 @@ header#fbhWrapper a {
     opacity:0.75;
     filter:alpha(opacity=75); /* For IE8 and earlier */
 }
+/*#fbhContent #fbhCallouts ul li a,
+#fbhContent #fbhFeatures ul li a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}*/
 #fbhContent #fbhSites ul li a:hover,
 #fbhContent #fbhCallouts ul li a:hover,
 #fbhContent #fbhFeatures ul li a:hover,
@@ -383,10 +388,11 @@ header#fbhWrapper a {
 	#fbhContent #fbhSites ul li {
         width:25%;
     }
-	#fbhContent #fbhCallouts ul li {
+	/*#fbhContent #fbhCallouts ul li {
 		width: 33.33333333333333%;
-	}
-	#fbhContent #fbhFeatures ul li {
+	}*/
+    #fbhContent #fbhCallouts ul li,
+    #fbhContent #fbhFeatures ul li {
         width:50%;
     }
 	#fbhContent ul#fbhLinks li {
@@ -451,7 +457,8 @@ header#fbhWrapper a {
 	
 }
 @media screen and (min-width:1080px) {
-	#fbhContent #fbhFeatures ul li {
+    #fbhContent #fbhCallouts ul li,
+    #fbhContent #fbhFeatures ul li {
         width:25%;
     }
 	#fbhBottom{
