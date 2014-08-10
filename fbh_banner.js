@@ -30,6 +30,39 @@ $(document).ready(function() {
 		
 		setTimeout(function(){
 			
+			//CONSTRAIN SITES BOX HEIGHT TO WIDTHS
+			fbhSites = $('#fbhSites').find('a');
+			function sitesCalc() {
+				sitesWidth = $(fbhSites).css('width');
+				$(fbhSites).css('height', sitesWidth);
+				};
+			sitesCalc();
+			$(window).resize(function () {
+				sitesCalc();
+				});
+			
+			//CONSTRAIN CALLOUT BOX HEIGHT TO WIDTHS
+			fbhCalls = $('#fbhCallouts').find('a');
+			function callsCalc() {
+				callsWidth = $(fbhCalls).css('width');
+				$(fbhCalls).css('height', callsWidth);
+			};
+			callsCalc();
+			$(window).resize(function () {
+				callsCalc();
+			});
+				
+			//CONSTRAIN FEATURE BOX HEIGHT TO WIDTHS
+			fbhFeat = $('#fbhFeatures').find('a');
+			function featCalc() {
+				featWidth = $(fbhFeat).css('width');
+				$(fbhFeat).css('height', featWidth);
+			};
+			featCalc();
+			$(window).resize(function () {
+				featCalc();
+			});
+				
 			headWrap = $('header#fbhWrapper');
 			
 			//SET INITIAL HEIGHT & PADDING OF HEADER
@@ -65,8 +98,8 @@ $(document).ready(function() {
 			};
 			function fbhResize() {
 				//console.log('window resized');
-				$(headWrap).animate({height : fbhHeight + 'px'}, 400, 'easeOutBounce');
-				$(buttonWrap).animate({top : fbhTotalHeight + 'px'}, 400, 'easeOutBounce');
+				$(headWrap).clearQueue().animate({height : fbhHeight + 'px'}, 400, 'easeOutBounce');
+				$(buttonWrap).clearQueue().animate({top : fbhTotalHeight + 'px'}, 400, 'easeOutBounce');
 			};
 			$(window).resize(function () {
                 setTimeout(function(){
@@ -112,39 +145,6 @@ $(document).ready(function() {
 			//FEATURED ITEM HOVER EFFECTS
 				
 			}, 100);
-		
-		//CONSTRAIN SITES BOX HEIGHT TO WIDTHS
-		fbhSites = $('#fbhSites').find('a');
-		function sitesCalc() {
-			sitesWidth = $(fbhSites).css('width');
-			$(fbhSites).css('height', sitesWidth);
-			};
-		sitesCalc();
-		$(window).resize(function () {
-			sitesCalc();
-			}); //!!!!!!!!!!!!
-		
-		//CONSTRAIN CALLOUT BOX HEIGHT TO WIDTHS
-		fbhCalls = $('#fbhCallouts').find('a');
-		function callsCalc() {
-			callsWidth = $(fbhCalls).css('width');
-			$(fbhCalls).css('height', callsWidth);
-		};
-		callsCalc();
-		$(window).resize(function () {
-			callsCalc();
-		});
-			
-		//CONSTRAIN FEATURE BOX HEIGHT TO WIDTHS
-		fbhFeat = $('#fbhFeatures').find('a');
-		function featCalc() {
-			featWidth = $(fbhFeat).css('width');
-			$(fbhFeat).css('height', featWidth);
-		};
-		featCalc();
-		$(window).resize(function () {
-			featCalc();
-		});
 		
 	});
 	
