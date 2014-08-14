@@ -2,27 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6816647f-e600-4b52-93da-6134a71b6921" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/100H.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/32H.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/46H.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/52H.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Cooperative.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/NRECA-Logo-color.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/NRECA-Logo-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/REMag.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/arrows.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cooperative.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ecba.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ect.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fbh_banner - Copy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fbh_banner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fbh_banner.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hsf.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/icons.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ms.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/tse.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/wqc.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/100H.jpg" afterPath="$PROJECT_DIR$/images/100H.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/32H.jpg" afterPath="$PROJECT_DIR$/images/32H.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/46H.jpg" afterPath="$PROJECT_DIR$/images/46H.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/52H.jpg" afterPath="$PROJECT_DIR$/images/52H.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NRECA-Logo-color.png" afterPath="$PROJECT_DIR$/images/NRECA-Logo-color.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/REMag.gif" afterPath="$PROJECT_DIR$/images/REMag.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cooperative.png" afterPath="$PROJECT_DIR$/images/cooperative.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fbh_banner - Copy.js" afterPath="$PROJECT_DIR$/js/fbh_banner - Copy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fbh_banner.css" afterPath="$PROJECT_DIR$/css/fbh_banner.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fbh_banner.js" afterPath="$PROJECT_DIR$/js/fbh_banner.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hsf.gif" afterPath="$PROJECT_DIR$/images/hsf.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fbh_banner.html" afterPath="$PROJECT_DIR$/fbh_banner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
