@@ -39,7 +39,7 @@ header#fbhWrapper a {
     float:left;
     width:81px;
     height:25px;
-    background-image:url('NRECA-Logo-color.png');
+    background-image:url('../images/NRECA-Logo-color.png');
     background-size:cover;
     margin-top:-6px;
 }
@@ -47,7 +47,7 @@ header#fbhWrapper a {
     float:right;
     width:113px;
     height:25px;
-    background-image:url('cooperative.png');
+    background-image:url('../images/cooperative.png');
     margin-top:-6px;
 }
 

@@ -4,7 +4,7 @@ $(document).ready(function() {
 	//INSERT CSS
 	head = $('head');
 	headlinklast = head.find('link[rel="stylesheet"]:last');
-	fbhCSS = '<link rel="stylesheet" href="fbh_banner.css" type="text/css" media="screen">';
+	fbhCSS = '<link rel="stylesheet" href="css/fbh_banner.css" type="text/css" media="screen">';
 	if (headlinklast.length){
 		headlinklast.after(fbhCSS);
 		}
